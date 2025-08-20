@@ -5,6 +5,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 import { NFT_ABI, NFT_CONTRACT } from "@/contracts/contracts";
 import { useEffect } from "react";
+import { Button } from "../ui/Button";
 
 export function MintSection() {
   const { address, isConnected } = useAccount();
@@ -34,13 +35,12 @@ export function MintSection() {
       {!isConnected ? (
         <ConnectButton />
       ) : (
-        <button
+        <Button
           onClick={handleMint}
           disabled={isPending}
-          className="bg-purple-600 px-4 py-2 rounded disabled:opacity-50"
         >
           {isPending ? "Minting..." : "Mint NFT (0.05 ETH)"}
-        </button>
+        </Button>
       )}
     </div>
   );

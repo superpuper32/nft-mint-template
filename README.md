@@ -1,3 +1,5 @@
+# NFT Mint Template
+
 Next.js + Solidity boilerplate for NFT minting sites.
 
 ## Features
